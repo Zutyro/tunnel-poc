@@ -20,7 +20,7 @@ if __name__ == '__main__':
     src_ip = '192.168.1.2'
     dst_ip = '192.168.2.2'
     victim_ip = '192.168.0.2'
-    inner_packet = construct_icmp_packet(src_ip,victim_ip)
+    inner_packet = construct_icmp_packet(dst_ip,victim_ip)
     tunnel_packet = construct_ipip_packet(src_ip,dst_ip, inner_packet)
     tunnel_packet.display()
     send(tunnel_packet)
